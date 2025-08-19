@@ -1,23 +1,30 @@
 
 public class Cartas {
     String naipe;
-    String Valor;
+    String valor;
 
     // CONSTRUTOR
     public Cartas(String naipe, String valor) {
         this.naipe = naipe;
-        Valor = valor;
+        this.valor = valor;
     }
     // GETTERS
     public String getNaipe() {
         return naipe;
     }
     public String getValor() {
-        return Valor;
+        return valor;
     }
 
     @Override
     public String toString() {
-        return "Cartas [naipe=" + naipe + ", Valor=" + Valor + "]";
+    String simbolo = "";
+    switch (naipe.toLowerCase()) {
+        case "espadas": simbolo = "♠"; break;
+        case "paus": simbolo = "♣"; break;
+        case "copas": simbolo = "♥"; break;
+        case "ouros": simbolo = "♦"; break;
     }
+    return valor + simbolo;
+}
 }

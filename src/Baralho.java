@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Baralho {
-    private List<Cartas> cartas;
+    public List<Cartas> cartas;
 
     public Baralho() {
         cartas = new ArrayList<>();
@@ -37,20 +37,19 @@ public class Baralho {
     public List<Cartas> iniciar() {
         List<Cartas> compradas = new ArrayList<>();
         for (int i = 0; i < 9 && !cartas.isEmpty(); i++) {
-            compradas.add(cartas.remove(0));
+            compradas.add(cartas.remove(cartas.size()-1));
         }
         return compradas;
     }
 
     // COMPRA UMA CARTA DA MESA
-    public List<Cartas> comprarCarta() {
-        List<Cartas> compradas = new ArrayList<>();
+    public Cartas comprarCarta() {
         if (!cartas.isEmpty()) {
-            compradas.add(cartas.remove(0));
-            return compradas;
+            return cartas.remove(cartas.size()-1);
         }
-        return null;
+    return null;
     }
+
 
     public int cartasRestantes() {
         return cartas.size();
