@@ -26,6 +26,12 @@ public class Baralho {
                 cartas.add(new Cartas(naipe, valor));
             }
         }
+
+        // ADICIONA OS CORINGAS
+        for (int i = 0; i<5; i++){
+        cartas.add(new Cartas("", "Coringa"));
+        }
+
     }
 
     // EMBARALHA O BARALHO
