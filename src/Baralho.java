@@ -12,24 +12,27 @@ public class Baralho {
         
         // DEFINE OS VALORES  
         String[] valores = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+        Integer[] naipesID = {1,2,3,4};
+        Integer[] valoresID = {1,2,3,4,5,6,7,8,9,10,11,12,13};
 
         // ADICIONA O PRIMEIRO DECK
-        for (String naipe : naipes) {
-            for (String valor : valores) {
-                cartas.add(new Cartas(naipe, valor));
+        for (int i = 0; i < naipes.length; i++) {
+            for (int j = 0; j < valores.length; j++) {
+                cartas.add(new Cartas(naipes[i], valores[j], naipesID[i], valoresID[j]));
             }
         }
 
+
         // ADICIONA O SEGUNDA DECK   
-        for (String naipe : naipes) {
-            for (String valor : valores) {
-                cartas.add(new Cartas(naipe, valor));
+        for (int i = 0; i < naipes.length; i++) {
+            for (int j = 0; j < valores.length; j++) {
+                cartas.add(new Cartas(naipes[i], valores[j], naipesID[i], valoresID[j]));
             }
         }
 
         // ADICIONA OS CORINGAS
         for (int i = 0; i<5; i++){
-        cartas.add(new Cartas("", "Coringa"));
+        cartas.add(new Cartas("", "Coringa", null, null));
         }
 
     }

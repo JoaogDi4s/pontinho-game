@@ -64,6 +64,14 @@ public class Jogador {
         System.out.println("Mão Atual : " + getMao());
     }
 
+    // DESCER TRINCA
+    public void jogarTrinca(){
+
+    }
+    // COLOCAR EM UMA TRINCA
+    // DESCER SEQUENCIA
+    // COLOCAR EM UMA SEQUENCIA
+
     // PRINTAR A MAO DO JOGADOR
     public String printarMao(){
         return nome + " Tem" + mao;

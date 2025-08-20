@@ -2,12 +2,17 @@
 public class Cartas {
     String naipe;
     String valor;
+    Integer valorID;
+    Integer naipeID;
 
     // CONSTRUTOR
-    public Cartas(String naipe, String valor) {
+    public Cartas(String naipe, String valor, Integer valorID, Integer naipeID) {
         this.naipe = naipe;
         this.valor = valor;
+        this.valorID = valorID;
+        this.naipeID = naipeID;
     }
+
     // GETTERS
     public String getNaipe() {
         return naipe;
